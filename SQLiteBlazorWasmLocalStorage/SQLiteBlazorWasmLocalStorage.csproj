@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Title>SQLite Blazor WASM Helper for EF Core</Title>
+    <Description>Helper library for using SQLite with EF Core in the browser on Blazor WebAssembly. Provides
+    the hooks to store the database in the browser application cache.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>VeriNova Technologies Inc.</Authors>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="XmlDocGen"/>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="stylecop.json"/>
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json"/>
+  </ItemGroup>
+  <ItemGroup>
+    <SupportedPlatform Include="browser"/>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RepositoryUrl>https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage</PackageProjectUrl>
+    <PackageTags>sqlite;ef core;entity framework;blazor;wasm;webassembly</PackageTags>
+    <Product>SQLite Wasm Helper</Product>
+    <UseFullSemVerForNuGet>true</UseFullSemVerForNuGet>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core"/>
+    <PackageReference Include="Nerdbank.GitVersioning">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3"/>
+    <PackageReference Include="StyleCop.Analyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\jeliknes\source\repos\SQLiteBlazorWasmLocalStorage\SQLiteBlazorWasmLocalStorage\.editorconfig"/>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\jeliknes\source\repos\SQLiteBlazorWasmLocalStorage\SQLiteBlazorWasmLocalStorage\.editorconfig"/>
+  </ItemGroup>
+</Project>

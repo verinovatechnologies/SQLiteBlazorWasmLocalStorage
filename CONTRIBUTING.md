@@ -3,17 +3,17 @@
 One of the easiest ways to contribute is to participate in discussions on GitHub issues. You can also contribute by submitting pull requests with code changes.
 
 ## General feedback and discussions?
-Start a discussion on the [SqliteWasmHelper issue tracker](https://github.com/JeremyLikness/SqliteWasmHelper/issues).
+Start a discussion on the [SQLiteBlazorWasmLocalStorage issue tracker](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/issues).
 
 ## Bugs and feature requests?
-To request a feature or report a new bug, [file a new issue](https://github.com/JeremyLikness/SqliteWasmHelper/issues/new/choose) and follow the template suggestions.
+To request a feature or report a new bug, [file a new issue](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/issues/new/choose) and follow the template suggestions.
 
 ## Contributing code and content
 
 We accept fixes and features! Here are some resources to help you get started on how to contribute code or new content.
 
-* ["Help wanted" issues](https://github.com/JeremyLikness/SqliteWasmHelper/labels/help%20wanted) - these issues are up for grabs. Comment on an issue if you want to create a fix.
-* ["Good first issue" issues](https://github.com/JeremyLikness/SqliteWasmHelper/labels/good%20first%20issue) - we think these are a good for newcomers.
+* ["Help wanted" issues](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/labels/help%20wanted) - these issues are up for grabs. Comment on an issue if you want to create a fix.
+* ["Good first issue" issues](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/labels/good%20first%20issue) - we think these are a good for newcomers.
 
 ### Identifying the scale
 
@@ -26,7 +26,7 @@ and tested by the Expression Power Tools team before being merged into the sourc
 ### Submitting a pull request
 
 If you don't know what a pull request is read this article: https://help.github.com/articles/using-pull-requests. Make sure the repository can build and all tests pass. 
-Familiarize yourself with the project workflow and our coding conventions. The project contains an [`.editorConfig`](https://github.com/JeremyLikness/SqliteWasmHelper/blob/main/SqliteWasmHelper/.editorconfig)
+Familiarize yourself with the project workflow and our coding conventions. The project contains an [`.editorConfig`](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/blob/main/SQLiteBlazorWasmLocalStorage/.editorconfig)
 that contains rules for conventions and is recognized automatically by Visual Studio. 
 
 In general, the checklist for pull requests is:

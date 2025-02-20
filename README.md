@@ -1,17 +1,17 @@
 > **ALTERNATIVE REPO (we make no claims or endorsements) [https://www.nuget.org/packages/Bit.Besql/](https://www.nuget.org/packages/Bit.Besql/)
 
 
-# SqliteWasmHelper
+# SQLiteBlazorWasmLocalStorage
 
 
 
-[![.NET Builds](https://github.com/JeremyLikness/SqliteWasmHelper/actions/workflows/build.yml/badge.svg)](https://github.com/JeremyLikness/SqliteWasmHelper/actions/workflows/build.yml)
-[![.NET Tests](https://github.com/JeremyLikness/SqliteWasmHelper/actions/workflows/tests.yml/badge.svg)](https://github.com/JeremyLikness/SqliteWasmHelper/actions/workflows/tests.yml)
-[![Generate and Publish Documentation](https://github.com/JeremyLikness/SqliteWasmHelper/actions/workflows/documentation.yml/badge.svg)](https://github.com/JeremyLikness/SqliteWasmHelper/actions/workflows/documentation.yml)
+[![.NET Builds](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/actions/workflows/build.yml/badge.svg)](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/actions/workflows/build.yml)
+[![.NET Tests](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/actions/workflows/tests.yml/badge.svg)](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/actions/workflows/tests.yml)
+[![Generate and Publish Documentation](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/actions/workflows/documentation.yml/badge.svg)](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/actions/workflows/documentation.yml)
 
-Download this package from [Nuget](https://www.nuget.org/packages/SqliteWasmHelper/).
+Download this package from [Nuget](https://www.nuget.org/packages/SQLiteBlazorWasmLocalStorage/).
 
-`SqliteWasmHelper` is a package designed to make it easy to work with SQLite databases
+`SQLiteBlazorWasmLocalStorage` is a package designed to make it easy to work with SQLite databases
 in Blazor Wasm apps. Although you *could* install [Eric Sink](https://github.com/ericsink)'s 
 [SQLitePCLRaw.bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3/) 
 package directly, that will only provide an in-memory implementation. This package 
@@ -26,7 +26,7 @@ data to the back end.
 ## Links
 
 - [MIT license](./LICENSE.txt)
-- [API documentation](https://github.com/JeremyLikness/SqliteWasmHelper/blob/main/SqliteWasmHelper/docs/SqliteWasmHelper.md)
+- [API documentation](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/blob/main/SQLiteBlazorWasmLocalStorage/docs/SQLiteBlazorWasmLocalStorage.md)
 - [Release notes](./ReleaseNotes.md)
 - [Contributing](./CONTRIBUTING.md)
 - [Code of conduct](./CODE_OF_CONDUCT.md)
@@ -35,7 +35,7 @@ data to the back end.
 
 Let's get right to the point! Boring text follows, a more exciting video with questionable audio quality can be viewed here:
 
-📽️ [How to use SQLiteWasmHelper to add EF Core 6.0 and SQLite to your Blazor WebAssembly projects](https://youtu.be/ZeJISZgy-FM)
+📽️ [How to use SQLiteBlazorWasmLocalStorage to add EF Core 6.0 and SQLite to your Blazor WebAssembly projects](https://youtu.be/ZeJISZgy-FM)
 
 ### Prerequisites
 
@@ -44,8 +44,8 @@ installed.
 
 ### Instlallation and use
 
-1. Install the lastest [SQlite in WebAssembly helper NuGet package](https://www.nuget.org/packages/SqliteWasmHelper/) or reference the `SqliteWasmHelper` project. This automatically installs all necessary dependencies:
-    1. `SqliteWasmHelper`
+1. Install the lastest [SQlite in WebAssembly helper NuGet package](https://www.nuget.org/packages/SQLiteBlazorWasmLocalStorage/) or reference the `SQLiteBlazorWasmLocalStorage` project. This automatically installs all necessary dependencies:
+    1. `SQLiteBlazorWasmLocalStorage`
     1. [Entity Framework Core and the SQLite provider](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite.Core/)
     1. The [SQLitePCLRaw.bundle](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3/) for running SQLite in WebAssembly
 1. Add the following to the `.csproj` file for your Blazor WebAssembly project (it can be added to an
@@ -55,7 +55,7 @@ existing `PropertyGroup`):
         <WasmBuildNative>true</WasmBuildNative>
     </PropertyGroup>
     ```
-1. Add `using SqliteWasmHelper;` to the top of the `Program.cs` file in your Blazor WebAssembly project
+1. Add `using SQLiteBlazorWasmLocalStorage;` to the top of the `Program.cs` file in your Blazor WebAssembly project
 1. Use the extension method to add a special `DbContext` factory:
     ```csharp
       builder.Services.AddSqliteWasmDbContextFactory<ThingContext>(
@@ -71,8 +71,8 @@ existing `PropertyGroup`):
     ctx.Things.Add(new Thing { Name = newThing });
     await ctx.SaveChangesAsync();
     ```
-1. If you want access to the file, look at the [GenerateDownloadLinkAsync](SqliteWasmHelper/docs/SqliteWasmHelper/IBrowserCache/GenerateDownloadLinkAsync.md) documentation
-or use/customize the [BackupLink](https://github.com/JeremyLikness/SqliteWasmHelper/blob/main/SqliteWasmHelper/BackupLink.razor) component.
+1. If you want access to the file, look at the [GenerateDownloadLinkAsync](SQLiteBlazorWasmLocalStorage/docs/SQLiteBlazorWasmLocalStorage/IBrowserCache/GenerateDownloadLinkAsync.md) documentation
+or use/customize the [BackupLink](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/blob/main/SQLiteBlazorWasmLocalStorage/BackupLink.razor) component.
 
 The `BlazorWasmExample` is a working example to show it in use.
 
@@ -114,14 +114,14 @@ N --> O
 
 The first time you context is generated, the database will be restored if a backup exists in cache. Any call to `SaveChangesAsync` will result in the database being saved to cache.
 
-To see the cache, open developer tools in your browser and navigate to Application -> Cache -> Cache Storage -> SqliteWasmHelper. The key for your database is `/data/cache/filename`.
+To see the cache, open developer tools in your browser and navigate to Application -> Cache -> Cache Storage -> SQLiteBlazorWasmLocalStorage. The key for your database is `/data/cache/filename`.
 
 ## Access your database for troubleshooting
 
 Run the application and use F12 to open developer tools. Navigate to the Console tab. Open the cache:
 
 ```javascript
-const cache = await caches.open('SqliteWasmHelper');
+const cache = await caches.open('SQLiteBlazorWasmLocalStorage');
 ```
 
 Now load the database backup from the cache. Swap `things.db` with the filename of *your* database.
@@ -147,7 +147,7 @@ You can then examine the database with your SQLite tool of choice. You can use a
 ## API documentation
 
 Read the autogenerated
-[API Docs](SqliteWasmHelper/docs/SqliteWasmHelper.md).
+[API Docs](SQLiteBlazorWasmLocalStorage/docs/SQLiteBlazorWasmLocalStorage.md).
 
 ## Release notes
 
@@ -156,4 +156,4 @@ Read the [release notes](./ReleaseNotes.md).
 ## Summary
 
 Questions? DM [@JeremyLikness](https://twitter.com/JeremyLikness) or open a
-[GitHub issue](https://github.com/JeremyLikness/SqliteWasmHelper/issues/new).
+[GitHub issue](https://github.com/verinovatechnologies/SQLiteBlazorWasmLocalStorage/issues/new).

@@ -1,17 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\SqliteWasmHelper\SqliteWasmHelper.csproj" />
+		<ProjectReference Include="..\SQLiteBlazorWasmLocalStorage\SQLiteBlazorWasmLocalStorage.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="XmlDocMarkdown.Core" Version="2.9.0" />
+		<PackageReference Include="XmlDocMarkdown.Core"/>
 	</ItemGroup>
 </Project>
