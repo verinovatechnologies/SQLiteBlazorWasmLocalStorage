@@ -4,7 +4,7 @@ var generate = XmlDocMarkdownApp.Run(args);
 
 var target = Path.Combine(
     Directory.GetCurrentDirectory(),
-        @"SqliteWasmHelper\docs\"
+        @"SQLiteBlazorWasmLocalStorage\docs\"
 .Replace('\\', Path.DirectorySeparatorChar));
 
 Console.WriteLine($"Version stamping at path {target}");
